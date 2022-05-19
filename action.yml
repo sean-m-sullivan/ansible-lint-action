@@ -11,7 +11,11 @@ inputs:
       not supported and you will need to alter linter configuration to
       accommodate other use cases.
     required: false
-    default: "."
+  config_path:
+    description: >
+      Specific path to the ansiblelint.yml config file.
+    required: false
+    default: ".ansiblelint.yml"
   args:
     description: deprecated
     deprecationMessage: >
@@ -30,3 +34,4 @@ runs:
   args:
     - -vvv
     - ${{ inputs.path }}
+
